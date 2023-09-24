@@ -5,4 +5,5 @@ Nesta disciplina os seguintes tópicos foram abordados:
 - Conceitos primitivos de probabilidade
 - Axiomas de Kolmogorov
 - Probabilidade condicional
+- Lei da Probabilidade Total
 - Teorema de Bayes
