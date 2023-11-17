@@ -14,14 +14,23 @@ def verificar_vitoria(tabuleiro, jogador):
     return False
 
 def jogada_aleatoria(tabuleiro, jogador):
-    vazias = [(linha, coluna) for linha in range(3) for coluna in range(3) if tabuleiro[linha][coluna] == " "]
+    vazias = []
+    for linha in range(3):
+        for coluna in range(3):
+            if tabuleiro[linha][coluna] == " ":
+                vazias.append((linha, coluna))
     if vazias:
         linha, coluna = choice(vazias)
         tabuleiro[linha][coluna] = jogador
 
 def jogo_da_velha():
     global vitorias, empates
-    tabuleiro = [[" " for _ in range(3)] for _ in range(3)]
+    tabuleiro = []
+    for _ in range(3):
+        linha = []
+        for _ in range(3):
+            linha.append(" ")
+        tabuleiro.append(linha)
     jogador_atual = choice(["X", "O"])
     jogo_acabou = False
 
